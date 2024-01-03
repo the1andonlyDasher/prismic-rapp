@@ -1,0 +1,16 @@
+{
+  "id": "product_main",
+  "type": "SharedSlice",
+  "name": "ProductMain",
+  "description": "ProductMain",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": ""
+    }
+  ]
+}
