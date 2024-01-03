@@ -1,0 +1,49 @@
+{
+  "id": "neuigkeit",
+  "type": "SharedSlice",
+  "name": "Neuigkeit",
+  "description": "Neuigkeit",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "news_header": {
+          "type": "Text",
+          "config": {
+            "label": "Überschrift",
+            "placeholder": ""
+          }
+        },
+        "news_subheader": {
+          "type": "Text",
+          "config": {
+            "label": "Unterüberschrift",
+            "placeholder": ""
+          }
+        },
+        "news_image": {
+          "type": "Image",
+          "config": {
+            "label": "Bild",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "news_link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

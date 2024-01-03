@@ -1,116 +1,114 @@
-/* vina-sans-regular - latin */
+/* hind-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Vina Sans";
+  font-family: "Hind";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/vina-sans-v6-latin-regular.eot"); /* IE9 Compat Modes */
-  src: url("/fonts/vina-sans-v6-latin-regular.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("/fonts/vina-sans-v6-latin-regular.woff2") format("woff2"),
+  src: url("/fonts/hind-v16-latin-regular.eot"); /* IE9 Compat Modes */
+  src:
+    url("/fonts/hind-v16-latin-regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/hind-v16-latin-regular.woff2") format("woff2"),
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("/fonts/vina-sans-v6-latin-regular.woff") format("woff"),
+      url("/fonts/hind-v16-latin-regular.woff") format("woff"),
     /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
-      url("/fonts/vina-sans-v6-latin-regular.ttf") format("truetype"),
+      url("/fonts/hind-v16-latin-regular.ttf") format("truetype"),
     /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-      url("/fonts/vina-sans-v6-latin-regular.svg#VinaSans") format("svg"); /* Legacy iOS */
+      url("/fonts/hind-v16-latin-regular.svg#Hind") format("svg"); /* Legacy iOS */
 }
 
-/* catamaran-regular - latin */
+/* hind-500 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Catamaran";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/catamaran-v17-latin-regular.eot"); /* IE9 Compat Modes */
-  src: url("/fonts/catamaran-v17-latin-regular.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("/fonts/catamaran-v17-latin-regular.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */ url("/fonts/catamaran-v17-latin-regular.woff")
-      format("woff"),
-    /* Modern Browsers */ url("/fonts/catamaran-v17-latin-regular.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("/fonts/catamaran-v17-latin-regular.svg#Catamaran") format("svg"); /* Legacy iOS */
-}
-
-/* catamaran-500 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Catamaran";
+  font-family: "Hind";
   font-style: normal;
   font-weight: 500;
-  src: url("/fonts/catamaran-v19-latin-500.eot"); /* IE9 Compat Modes */
-  src: url("/fonts/catamaran-v19-latin-500.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("/fonts/catamaran-v19-latin-500.woff2") format("woff2"),
+  src: url("/fonts/hind-v16-latin-500.eot"); /* IE9 Compat Modes */
+  src:
+    url("/fonts/hind-v16-latin-500.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/hind-v16-latin-500.woff2") format("woff2"),
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-      url("/fonts/catamaran-v19-latin-500.woff") format("woff"),
+      url("/fonts/hind-v16-latin-500.woff") format("woff"),
     /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
-      url("/fonts/catamaran-v19-latin-500.ttf") format("truetype"),
+      url("/fonts/hind-v16-latin-500.ttf") format("truetype"),
     /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-      url("/fonts/catamaran-v19-latin-500.svg#Catamaran") format("svg"); /* Legacy iOS */
+      url("/fonts/hind-v16-latin-500.svg#Hind") format("svg"); /* Legacy iOS */
 }
 
-/* catamaran-900 - latin */
+/* heebo-700 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Catamaran";
+  font-family: "Heebo";
   font-style: normal;
-  font-weight: 900;
-  src: url("/fonts/catamaran-v17-latin-900.eot"); /* IE9 Compat Modes */
-  src: url("/fonts/catamaran-v17-latin-900.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("/fonts/catamaran-v17-latin-900.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("/fonts/catamaran-v17-latin-900.woff")
-      format("woff"),
-    /* Modern Browsers */ url("/fonts/catamaran-v17-latin-900.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("/fonts/catamaran-v17-latin-900.svg#Catamaran") format("svg"); /* Legacy iOS */
+  font-weight: 700;
+  src: url("/fonts/heebo-v22-latin-700.eot"); /* IE9 Compat Modes */
+  src:
+    url("/fonts/heebo-v22-latin-700.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/heebo-v22-latin-700.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("/fonts/heebo-v22-latin-700.woff") format("woff"),
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+      url("/fonts/heebo-v22-latin-700.ttf") format("truetype"),
+    /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+      url("/fonts/heebo-v22-latin-700.svg#Heebo") format("svg"); /* Legacy iOS */
 }
 
-/* courier-prime-regular - latin */
+/* heebo-800 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Courier Prime";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/courier-prime-v7-latin-regular.eot"); /* IE9 Compat Modes */
-  src: url("/fonts/courier-prime-v7-latin-regular.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("/fonts/courier-prime-v7-latin-regular.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("/fonts/courier-prime-v7-latin-regular.woff") format("woff"),
-    /* Modern Browsers */ url("/fonts/courier-prime-v7-latin-regular.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("/fonts/courier-prime-v7-latin-regular.svg#CourierPrime")
-      format("svg"); /* Legacy iOS */
-}
-
-/* fira-sans-800 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Fira Sans";
+  font-family: "Heebo";
   font-style: normal;
   font-weight: 800;
-  src: url("/fonts/fira-sans-v16-latin-800.eot"); /* IE9 Compat Modes */
-  src: url("/fonts/fira-sans-v16-latin-800.eot?#iefix")
+  src: url("/fonts/heebo-v22-latin-800.eot"); /* IE9 Compat Modes */
+  src:
+    url("/fonts/heebo-v22-latin-800.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/heebo-v22-latin-800.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("/fonts/heebo-v22-latin-800.woff") format("woff"),
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+      url("/fonts/heebo-v22-latin-800.ttf") format("truetype"),
+    /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+      url("/fonts/heebo-v22-latin-800.svg#Heebo") format("svg"); /* Legacy iOS */
+}
+
+/* heebo-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/heebo-v22-latin-900.eot"); /* IE9 Compat Modes */
+  src:
+    url("/fonts/heebo-v22-latin-900.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/heebo-v22-latin-900.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("/fonts/heebo-v22-latin-900.woff") format("woff"),
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+      url("/fonts/heebo-v22-latin-900.ttf") format("truetype"),
+    /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+      url("/fonts/heebo-v22-latin-900.svg#Heebo") format("svg"); /* Legacy iOS */
+}
+
+/* quando-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Quando";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/quando-v16-latin-regular.eot"); /* IE9 Compat Modes */
+  src:
+    url("/fonts/quando-v16-latin-regular.eot?#iefix")
       format("embedded-opentype"),
-    /* IE6-IE8 */ url("/fonts/fira-sans-v16-latin-800.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("/fonts/fira-sans-v16-latin-800.woff")
-      format("woff"),
-    /* Modern Browsers */ url("/fonts/fira-sans-v16-latin-800.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("/fonts/fira-sans-v16-latin-800.svg#FiraSans") format("svg"); /* Legacy iOS */
+    /* IE6-IE8 */ url("/fonts/quando-v16-latin-regular.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("/fonts/quando-v16-latin-regular.woff") format("woff"),
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+      url("/fonts/quando-v16-latin-regular.ttf") format("truetype"),
+    /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+      url("/fonts/quando-v16-latin-regular.svg#Quando") format("svg"); /* Legacy iOS */
 }
 
 $fonts: (
-  header: Fira Sans,
-  sub: Courier Prime,
-  text: Catamaran,
+  header: Heebo,
+  sub: Quando,
+  text: Hind,
 );

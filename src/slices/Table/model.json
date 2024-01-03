@@ -1,0 +1,90 @@
+{
+  "id": "table",
+  "type": "SharedSlice",
+  "name": "Table",
+  "description": "Table",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "uberschrift": {
+          "type": "Text",
+          "config": {
+            "label": "Überschrift",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "text": {
+          "type": "Text",
+          "config": {
+            "label": "Text",
+            "placeholder": ""
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "bild": {
+          "type": "Image",
+          "config": {
+            "label": "Bild",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      }
+    },
+    {
+      "id": "angebote",
+      "name": "Angebote",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "uberschrift": {
+          "type": "Text",
+          "config": {
+            "label": "Überschrift",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "text": {
+          "type": "Text",
+          "config": {
+            "label": "Text",
+            "placeholder": ""
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "bild": {
+          "type": "Image",
+          "config": {
+            "label": "Bild",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      }
+    }
+  ]
+}

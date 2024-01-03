@@ -3,6 +3,11 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  angebote: dynamic(() => import("./Angebote")),
   hero: dynamic(() => import("./Hero")),
+  hero_grid: dynamic(() => import("./Angebot")),
+  mini_kontaktfeld: dynamic(() => import("./MiniKontaktfeld")),
+  neuigkeit: dynamic(() => import("./Neuigkeit")),
   product_main: dynamic(() => import("./ProductMain")),
+  table: dynamic(() => import("./Table")),
 };

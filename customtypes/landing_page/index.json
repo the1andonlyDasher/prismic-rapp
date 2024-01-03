@@ -17,6 +17,18 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "mini_kontaktfeld": {
+              "type": "SharedSlice"
+            },
+            "table": {
+              "type": "SharedSlice"
+            },
+            "neuigkeit": {
+              "type": "SharedSlice"
+            },
+            "hero_grid": {
+              "type": "SharedSlice"
+            },
             "hero": {
               "type": "SharedSlice"
             }
@@ -49,6 +61,13 @@
           "placeholder": "A title of the page used for social media and search engines"
         },
         "type": "Text"
+      },
+      "meta_keywords": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Keywords",
+          "placeholder": ""
+        }
       }
     }
   }

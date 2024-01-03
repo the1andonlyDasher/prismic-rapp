@@ -1,0 +1,51 @@
+{
+  "id": "hero_grid",
+  "type": "SharedSlice",
+  "name": "Angebot",
+  "description": "HeroGrid",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "offer_title": {
+          "type": "Text",
+          "config": {
+            "label": "Angebot Titel",
+            "placeholder": ""
+          }
+        },
+        "offer_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Angebot Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "offer_image": {
+          "type": "Image",
+          "config": {
+            "label": "Angebot Bild",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "offer_link": {
+          "type": "Link",
+          "config": {
+            "label": "Angebot Link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

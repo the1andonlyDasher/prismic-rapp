@@ -23,7 +23,7 @@ export function Model(props: any) {
     })
   }, [materials])
   return (
-    <Stage adjustCamera={Math.max(0.75, Math.min(size.width / 500, 1.5))} intensity={0.5} shadows="contact">
+    <Stage adjustCamera={Math.max(0.5, Math.min(size.width / 500, 1.5))} intensity={0.5} shadows="contact">
       <group ref={group} scale={Math.min(0.3, Math.max(w, 10))} {...props} dispose={null}>
         <mesh geometry={nodes.Cylinder.geometry} material={materials.glass} />
         <mesh geometry={nodes.Cylinder002.geometry} material={materials.label_bottom_lime} rotation={[0, 0.451, 0]} scale={1.001} />

@@ -7,10 +7,9 @@
     }
   }
 
-  @each $font, $value in $fonts 
-  {
-   --fonts-#{$font}: "#{$value}";
- }
+  @each $font, $value in $fonts {
+    --fonts-#{$font}: "#{$value}";
+  }
 
   @each $screen-size, $font-size in $type-scale {
     @if $screen-size == xs {

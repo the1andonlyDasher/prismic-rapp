@@ -6,8 +6,6 @@ import { load, scrollEnabled } from "@/ts/atoms";
 import { useAtom } from "jotai";
 import WebGL from "@/gl/GL";
 import Loader from "./Loader";
-import { PrismicPreview } from "@prismicio/next";
-import { repositoryName } from '@/prismicio'
 
 
 export default function Layout({ children, navbar, legals, t }: any) {
@@ -87,7 +85,7 @@ export default function Layout({ children, navbar, legals, t }: any) {
         >
 
           {children}
-          <PrismicPreview repositoryName={repositoryName} />
+
         </motion.div>
 
       </AnimatePresence>

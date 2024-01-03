@@ -4,12 +4,27 @@
 		"variation": "default",
 		"primary": {
 			"header_one": {
+				"__TYPE__": "FieldContent",
+				"value": "pocket",
+				"type": "Text"
+			},
+			"header_two": {
+				"__TYPE__": "FieldContent",
+				"value": "unknown",
+				"type": "Text"
+			},
+			"subheader": {
+				"__TYPE__": "FieldContent",
+				"value": "refused",
+				"type": "Text"
+			},
+			"text": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Consectetur ullamco velit ut sit in reprehenderit in laborum cupidatat elit nulla cupidatat nisi. Labore magna ex irure consectetur sunt labore ad nisi duis proident voluptate velit eiusmod."
+							"text": "Ad duis quis proident. Eiusmod aliqua consequat sint duis sint minim non culpa do do nulla proident ullamco."
 						}
 					}
 				]

@@ -1,0 +1,49 @@
+{
+  "id": "angebote",
+  "type": "SharedSlice",
+  "name": "Angebote",
+  "description": "Angebote",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "table_header": {
+          "type": "Text",
+          "config": {
+            "label": "Titel der Tabelle",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "table_title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "table_text": {
+          "type": "Text",
+          "config": {
+            "label": "Text",
+            "placeholder": ""
+          }
+        },
+        "table_image": {
+          "type": "Image",
+          "config": {
+            "label": "Bild",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      }
+    }
+  ]
+}

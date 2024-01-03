@@ -4,7 +4,12 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type LandingPageDocumentDataSlicesSlice = HeroSlice;
+type LandingPageDocumentDataSlicesSlice =
+  | MiniKontaktfeldSlice
+  | TableSlice
+  | NeuigkeitSlice
+  | HeroGridSlice
+  | HeroSlice;
 
 /**
  * Content for Landing Page documents
@@ -51,6 +56,17 @@ interface LandingPageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Keywords field in *Landing Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: landing_page.meta_keywords
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_keywords: prismic.KeyTextField;
 }
 
 /**
@@ -137,18 +153,128 @@ export type ProductDocument<Lang extends string = string> =
 export type AllDocumentTypes = LandingPageDocument | ProductDocument;
 
 /**
+ * Primary content in *Angebote → Primary*
+ */
+export interface AngeboteSliceDefaultPrimary {
+  /**
+   * Titel der Tabelle field in *Angebote → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: angebote.primary.table_header
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  table_header: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Angebote → Items*
+ */
+export interface AngeboteSliceDefaultItem {
+  /**
+   * Title field in *Angebote → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: angebote.items[].table_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  table_title: prismic.KeyTextField;
+
+  /**
+   * Text field in *Angebote → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: angebote.items[].table_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  table_text: prismic.KeyTextField;
+
+  /**
+   * Bild field in *Angebote → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: angebote.items[].table_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  table_image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Angebote Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AngeboteSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<AngeboteSliceDefaultPrimary>,
+  Simplify<AngeboteSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Angebote*
+ */
+type AngeboteSliceVariation = AngeboteSliceDefault;
+
+/**
+ * Angebote Shared Slice
+ *
+ * - **API ID**: `angebote`
+ * - **Description**: Angebote
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AngeboteSlice = prismic.SharedSlice<
+  "angebote",
+  AngeboteSliceVariation
+>;
+
+/**
  * Primary content in *Hero → Primary*
  */
 export interface HeroSliceDefaultPrimary {
   /**
    * Header_one field in *Hero → Primary*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
    * - **API ID Path**: hero.primary.header_one
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  header_one: prismic.KeyTextField;
+
+  /**
+   * Header_two field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.header_two
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  header_two: prismic.KeyTextField;
+
+  /**
+   * Subheader field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.subheader
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subheader: prismic.KeyTextField;
+
+  /**
+   * Text field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.text
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  header_one: prismic.RichTextField;
+  text: prismic.RichTextField;
 }
 
 /**
@@ -177,6 +303,211 @@ type HeroSliceVariation = HeroSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
+
+/**
+ * Primary content in *Angebot → Primary*
+ */
+export interface HeroGridSliceDefaultPrimary {
+  /**
+   * Angebot Titel field in *Angebot → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_grid.primary.offer_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  offer_title: prismic.KeyTextField;
+
+  /**
+   * Angebot Text field in *Angebot → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_grid.primary.offer_text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  offer_text: prismic.RichTextField;
+
+  /**
+   * Angebot Bild field in *Angebot → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_grid.primary.offer_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  offer_image: prismic.ImageField<never>;
+
+  /**
+   * Angebot Link field in *Angebot → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_grid.primary.offer_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  offer_link: prismic.LinkField;
+}
+
+/**
+ * Default variation for Angebot Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroGridSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HeroGridSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Angebot*
+ */
+type HeroGridSliceVariation = HeroGridSliceDefault;
+
+/**
+ * Angebot Shared Slice
+ *
+ * - **API ID**: `hero_grid`
+ * - **Description**: HeroGrid
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroGridSlice = prismic.SharedSlice<
+  "hero_grid",
+  HeroGridSliceVariation
+>;
+
+/**
+ * Primary content in *MiniKontaktfeld → Primary*
+ */
+export interface MiniKontaktfeldSliceDefaultPrimary {
+  /**
+   * Überschrift field in *MiniKontaktfeld → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mini_kontaktfeld.primary.miniContact_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  miniContact_title: prismic.KeyTextField;
+
+  /**
+   * Button field in *MiniKontaktfeld → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mini_kontaktfeld.primary.miniContact_button
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  miniContact_button: prismic.LinkField;
+}
+
+/**
+ * Default variation for MiniKontaktfeld Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MiniKontaktfeldSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<MiniKontaktfeldSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *MiniKontaktfeld*
+ */
+type MiniKontaktfeldSliceVariation = MiniKontaktfeldSliceDefault;
+
+/**
+ * MiniKontaktfeld Shared Slice
+ *
+ * - **API ID**: `mini_kontaktfeld`
+ * - **Description**: MiniKontaktfeld
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MiniKontaktfeldSlice = prismic.SharedSlice<
+  "mini_kontaktfeld",
+  MiniKontaktfeldSliceVariation
+>;
+
+/**
+ * Primary content in *Neuigkeit → Primary*
+ */
+export interface NeuigkeitSliceDefaultPrimary {
+  /**
+   * Überschrift field in *Neuigkeit → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: neuigkeit.primary.news_header
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  news_header: prismic.KeyTextField;
+
+  /**
+   * Unterüberschrift field in *Neuigkeit → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: neuigkeit.primary.news_subheader
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  news_subheader: prismic.KeyTextField;
+
+  /**
+   * Bild field in *Neuigkeit → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: neuigkeit.primary.news_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  news_image: prismic.ImageField<never>;
+
+  /**
+   * Link field in *Neuigkeit → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: neuigkeit.primary.news_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  news_link: prismic.LinkField;
+}
+
+/**
+ * Default variation for Neuigkeit Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type NeuigkeitSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<NeuigkeitSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Neuigkeit*
+ */
+type NeuigkeitSliceVariation = NeuigkeitSliceDefault;
+
+/**
+ * Neuigkeit Shared Slice
+ *
+ * - **API ID**: `neuigkeit`
+ * - **Description**: Neuigkeit
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type NeuigkeitSlice = prismic.SharedSlice<
+  "neuigkeit",
+  NeuigkeitSliceVariation
+>;
 
 /**
  * Default variation for ProductMain Slice
@@ -208,6 +539,146 @@ export type ProductMainSlice = prismic.SharedSlice<
   ProductMainSliceVariation
 >;
 
+/**
+ * Primary content in *Table → Primary*
+ */
+export interface TableSliceDefaultPrimary {
+  /**
+   * Überschrift field in *Table → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: table.primary.uberschrift
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  uberschrift: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Table → Items*
+ */
+export interface TableSliceDefaultItem {
+  /**
+   * Text field in *Table → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: table.items[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+
+  /**
+   * Title field in *Table → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: table.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Bild field in *Table → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: table.items[].bild
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  bild: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Table Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TableSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TableSliceDefaultPrimary>,
+  Simplify<TableSliceDefaultItem>
+>;
+
+/**
+ * Primary content in *Table → Primary*
+ */
+export interface TableSliceAngebotePrimary {
+  /**
+   * Überschrift field in *Table → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: table.primary.uberschrift
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  uberschrift: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Table → Items*
+ */
+export interface TableSliceAngeboteItem {
+  /**
+   * Text field in *Table → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: table.items[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+
+  /**
+   * Title field in *Table → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: table.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Bild field in *Table → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: table.items[].bild
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  bild: prismic.ImageField<never>;
+}
+
+/**
+ * Angebote variation for Table Slice
+ *
+ * - **API ID**: `angebote`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TableSliceAngebote = prismic.SharedSliceVariation<
+  "angebote",
+  Simplify<TableSliceAngebotePrimary>,
+  Simplify<TableSliceAngeboteItem>
+>;
+
+/**
+ * Slice variation for *Table*
+ */
+type TableSliceVariation = TableSliceDefault | TableSliceAngebote;
+
+/**
+ * Table Shared Slice
+ *
+ * - **API ID**: `table`
+ * - **Description**: Table
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TableSlice = prismic.SharedSlice<"table", TableSliceVariation>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -225,13 +696,38 @@ declare module "@prismicio/client" {
       ProductDocumentData,
       ProductDocumentDataSlicesSlice,
       AllDocumentTypes,
+      AngeboteSlice,
+      AngeboteSliceDefaultPrimary,
+      AngeboteSliceDefaultItem,
+      AngeboteSliceVariation,
+      AngeboteSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      HeroGridSlice,
+      HeroGridSliceDefaultPrimary,
+      HeroGridSliceVariation,
+      HeroGridSliceDefault,
+      MiniKontaktfeldSlice,
+      MiniKontaktfeldSliceDefaultPrimary,
+      MiniKontaktfeldSliceVariation,
+      MiniKontaktfeldSliceDefault,
+      NeuigkeitSlice,
+      NeuigkeitSliceDefaultPrimary,
+      NeuigkeitSliceVariation,
+      NeuigkeitSliceDefault,
       ProductMainSlice,
       ProductMainSliceVariation,
       ProductMainSliceDefault,
+      TableSlice,
+      TableSliceDefaultPrimary,
+      TableSliceDefaultItem,
+      TableSliceAngebotePrimary,
+      TableSliceAngeboteItem,
+      TableSliceVariation,
+      TableSliceDefault,
+      TableSliceAngebote,
     };
   }
 }

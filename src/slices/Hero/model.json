@@ -13,12 +13,33 @@
       "imageUrl": "",
       "primary": {
         "header_one": {
-          "type": "StructuredText",
+          "type": "Text",
           "config": {
             "label": "Header_one",
+            "placeholder": ""
+          }
+        },
+        "header_two": {
+          "type": "Text",
+          "config": {
+            "label": "Header_two",
+            "placeholder": ""
+          }
+        },
+        "subheader": {
+          "type": "Text",
+          "config": {
+            "label": "Subheader",
+            "placeholder": ""
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         }
       },

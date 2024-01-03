@@ -1,6 +1,8 @@
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { Hero as HeroSection } from "@/components/hero";
+import { View } from "@/components/Canvas/View";
+import { Model } from "@/gl/Rapp_final";
 
 /**
  * Props for `Hero`.
@@ -17,15 +19,16 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       <HeroSection
-        headerPartOne="Header"
-        headerPartTwo="two"
-        subHeader="subheader"
-        text="text"
+        headerPartOne={`${slice.primary.header_one}`}
+        headerPartTwo={`${slice.primary.header_two}`}
+        subHeader={slice.primary.subheader}
+        text={slice.primary.text}
         buttonOne="one"
         buttonTwo="two"
         linkOne="/portfolio"
         linkTwo="/contact"
-      ></HeroSection>
+      >
+      </HeroSection>
     </section>
   );
 };

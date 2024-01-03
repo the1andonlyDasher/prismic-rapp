@@ -1,0 +1,21 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"miniContact_title": {
+				"__TYPE__": "FieldContent",
+				"value": "surface",
+				"type": "Text"
+			},
+			"miniContact_button": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			}
+		},
+		"items": []
+	}
+]

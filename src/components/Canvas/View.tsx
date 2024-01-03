@@ -19,7 +19,7 @@ const View = forwardRef(({ children, ...props }: any, ref: any) => {
 
     return (
         <>
-            <div ref={localRef} {...props} >
+            <div className='w-full h-full' ref={localRef} {...props} >
                 <Three>
                     <ViewImpl track={localRef}>
                         {children}

@@ -3,6 +3,7 @@ import { motion, useAnimationControls } from "framer-motion";
 import { useInView } from "framer-motion";
 import Link from "next/link";
 import { Url } from "url";
+import { PrismicRichText } from "@prismicio/react";
 
 const section_variants = {
   initial: {
@@ -77,13 +78,14 @@ const variants = {
 interface heroProps {
   headerPartOne?: string | number | undefined,
   headerPartTwo?: string | number | undefined,
-  subHeader?: string | number | undefined,
-  text?: string | number | undefined,
+  subHeader?: any,
+  text?: any,
   buttonOne?: string | number | undefined,
   buttonTwo?: string | number | undefined,
   linkOne: Url | string,
   linkTwo: Url | string,
   children?: ReactNode;
+  childrenRight?: ReactNode;
 }
 
 export const Hero = (props: heroProps) => {
@@ -109,9 +111,9 @@ export const Hero = (props: heroProps) => {
           </motion.h1> : null}
 
           <motion.h3 variants={header_variants}>{props.subHeader}</motion.h3>
-          <motion.p variants={text_variants}>
-            {props.text}
-          </motion.p>
+          <motion.div variants={text_variants}>
+            <PrismicRichText field={props.text} />
+          </motion.div>
           <motion.div variants={text_variants} className="button__wrapper no-flex">
             <Link href={props.linkOne}><button type="button" className="btn__primary">{props.buttonOne}</button></Link>
 
@@ -120,7 +122,9 @@ export const Hero = (props: heroProps) => {
           </motion.div>
           {props.children}
         </motion.div>
-        <motion.div className="right-wrapper"></motion.div>
+        <motion.div className="right-wrapper">
+          {props.childrenRight}
+        </motion.div>
       </motion.div>
     </>
   );
