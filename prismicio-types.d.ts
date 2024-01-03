@@ -137,6 +137,21 @@ export type ProductDocument<Lang extends string = string> =
 export type AllDocumentTypes = LandingPageDocument | ProductDocument;
 
 /**
+ * Primary content in *Hero → Primary*
+ */
+export interface HeroSliceDefaultPrimary {
+  /**
+   * Header_one field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.header_one
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  header_one: prismic.RichTextField;
+}
+
+/**
  * Default variation for Hero Slice
  *
  * - **API ID**: `default`
@@ -145,7 +160,7 @@ export type AllDocumentTypes = LandingPageDocument | ProductDocument;
  */
 export type HeroSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<HeroSliceDefaultPrimary>,
   never
 >;
 
@@ -211,6 +226,7 @@ declare module "@prismicio/client" {
       ProductDocumentDataSlicesSlice,
       AllDocumentTypes,
       HeroSlice,
+      HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
       ProductMainSlice,

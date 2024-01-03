@@ -2,7 +2,19 @@
 	{
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
-		"primary": {},
+		"primary": {
+			"header_one": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Consectetur ullamco velit ut sit in reprehenderit in laborum cupidatat elit nulla cupidatat nisi. Labore magna ex irure consectetur sunt labore ad nisi duis proident voluptate velit eiusmod."
+						}
+					}
+				]
+			}
+		},
 		"items": []
 	}
 ]
